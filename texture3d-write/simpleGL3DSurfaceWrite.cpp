@@ -25,6 +25,7 @@
 #  include <windows.h>
 #endif
 
+#include <stdio.h>
 
 // OpenGL Graphics includes
 #include <GL/glew.h>
@@ -132,6 +133,8 @@ int main(int argc, char** argv)
 	checkTex();
 
 	CHECK_CUDA(cudaGraphicsUnregisterResource(cuda_image_resource));
+
+	getchar();
 
 	glDeleteTextures(1, &texID);
 	
